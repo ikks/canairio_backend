@@ -32,7 +32,7 @@ DEBUG = True
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': getenvvar('DATABASE_NAME'),
         'USER': getenvvar('DATABASE_USERNAME'),
         'PASSWORD': getenvvar('DATABASE_PASSWORD'),
@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
     'rest_framework',
     'knox',
     'users',
